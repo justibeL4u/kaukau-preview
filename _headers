@@ -1,0 +1,10 @@
+# 配置先が Cloudflare Pages／Netlify のときに付く応答ヘッダー（GitHub Pages では無視される。その場合 CSP は各ページの meta だけが効く）
+# 本番では X-Robots-Tag の行を消す。予約フォームの送信先を connect-src・form-action に、Turnstile を script-src・frame-src に足す。
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  X-Robots-Tag: noindex, nofollow

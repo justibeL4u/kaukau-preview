@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 試作のため検索エンジンに載せない（本番では外す） -->
+<meta name="robots" content="noindex, nofollow">
+<title>カウカウ｜東大阪市の買取専門店（出張費・査定費 全て無料）</title>
+<meta name="description" content="東大阪市の買取専門店カウカウ。出張費・査定費は全て無料。金・プラチナ・貴金属・ブランド品・時計・着物・お酒など、お宅までお伺いしてその場で査定いたします。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- アイコンと手描き風の飾り（use で呼び出す） -->
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5zM4 10h16M8.5 3v4M15.5 3v4M8 14h2M14 14h2M8 17h2"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></symbol>
+  <symbol id="i-yen" viewBox="0 0 24 24"><path d="M6.5 4 12 11.5 17.5 4M12 11.5V20M8 13h8M8 16.5h8"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 8.5 12 5l8 3.5v8L12 20l-8-3.5zM4 8.5l8 3.5 8-3.5M12 12v8"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3.5v2.5h-7M6.5 19a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zM16.5 19a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="d-squiggle" viewBox="0 0 160 16"><path d="M3 10c12-6 24-7 36-2s22 8 36 2 26-8 40-2 24 6 42 0"/></symbol>
+  <symbol id="d-marker" viewBox="0 0 200 20"><path d="M4 11c40-5 100-7 192-4M22 16c50-4 108-5 166-2"/></symbol>
+  <symbol id="d-divider" viewBox="0 0 320 40"><path d="M6 22c12-7 24-7 36 0s24 7 36 0 24-7 36 0 18 5 24 2M184 24c6 3 12-2 24-2s24 7 36 0 24-7 36 0 18 6 34 3M160 34c-2-8-1-17 3-26M160 27c-9-1-13-7-11-12 7 0 11 5 11 12zM162 19c8-1 12-6 10-11-7 0-10 5-10 11z"/></symbol>
+  <symbol id="d-sparkle" viewBox="0 0 48 48"><path d="M24 5v12M24 31v12M5 24h12M31 24h12M12 12l5 5M31 31l5 5M36 12l-5 5M17 31l-5 5"/></symbol>
+</svg>
+
+<header class="site-header" data-header>
+  <div class="container header-bar">
+    <a class="brand" href="#top">
+      <span class="brand-name">カウカウ</span>
+      <span class="brand-sub">買取専門店</span>
+    </a>
+    <a class="header-call" href="tel:0643095212">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>電話</span><span class="visually-hidden">をかける 06-4309-5212</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" data-nav-toggle hidden>
+      <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      <span>メニュー</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="ページ内のご案内">
+      <ul class="nav-list">
+        <li><a href="#about">カウカウについて</a></li>
+        <li><a href="#items">買取品目</a></li>
+        <li><a href="#flow">買取の流れ</a></li>
+        <li><a href="#booking">出張査定の予約</a></li>
+        <li><a href="#company">会社情報</a></li>
+      </ul>
+    </nav>
+    <a class="header-tel" href="tel:0643095212">
+      <span class="header-tel-label">お電話は年中無休</span>
+      <span class="header-tel-number"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>06-4309-5212</span>
+    </a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="hero" id="hero" aria-labelledby="hero-title" data-hero>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>東大阪市の買取専門店</p>
+        <h1 class="hero-title" id="hero-title">買取なら<em>安心</em>・<br>高価買取のカウカウへ！</h1>
+        <p class="hero-free">出張費・査定費 <strong class="hero-free-strong">全て無料<svg class="hero-free-line" aria-hidden="true"><use href="#d-marker"/></svg></strong></p>
+        <p class="hero-lead">金・プラチナ・貴金属・ブランド品・時計・着物・お酒など、何でもご相談ください。</p>
+        <div class="hero-actions">
+          <div class="call-card">
+            <p class="call-card-label">まずはお電話で、お気軽にどうぞ</p>
+            <a class="tel-link" href="tel:0643095212"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="tel-number">06-4309-5212</span></a>
+            <p class="call-card-note"><span class="nowrap">営業時間 9:00〜18:00</span><span class="nowrap">（日・祝 定休）</span><br>お電話は年中無休で<span class="nowrap">受け付けています</span></p>
+          </div>
+          <a class="button button--primary button--large" href="#booking"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>出張査定を予約する</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <picture class="hero-photo-main">
+          <source srcset="../assets/img/hero-kimono-1.webp" type="image/webp">
+          <img src="../assets/img/hero-kimono-1.jpg" alt="色とりどりの着物の帯" width="1000" height="664" fetchpriority="high" decoding="async">
+        </picture>
+        <picture class="hero-photo-sub">
+          <source srcset="../assets/img/hero-jewelry.webp" type="image/webp">
+          <img src="../assets/img/hero-jewelry.jpg" alt="金のネックレスや指輪、真珠のネックレス" width="1000" height="666" loading="lazy" decoding="async">
+        </picture>
+        <p class="hero-stamp">お宅まで<br>お伺い<br>します</p>
+        <svg class="hero-sparkle" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section promises" id="promises" aria-labelledby="promises-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title" id="promises-title">カウカウの3つの安心</h2>
+        <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+      </div>
+      <ul class="promise-list" role="list">
+        <li class="promise-card" data-reveal>
+          <span class="promise-icon"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></span>
+          <h3 class="promise-title">出張費・査定費 無料</h3>
+          <p>お宅までお伺いする出張費も、査定費も、全て無料です。</p>
+        </li>
+        <li class="promise-card" data-reveal>
+          <span class="promise-icon"><svg class="icon" aria-hidden="true"><use href="#i-yen"/></svg></span>
+          <h3 class="promise-title">その場で現金お支払い</h3>
+          <p>ご提示した金額にご了承いただければ、その場で現金でお支払いします。</p>
+          <p class="promise-note">高額の場合などは、ご指定の口座へのお振込みになります。</p>
+        </li>
+        <li class="promise-card" data-reveal>
+          <span class="promise-icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+          <h3 class="promise-title">箱なし・キズあり OK</h3>
+          <p>ブランド品やアクセサリーは、箱がなくても、キズがあっても大丈夫です。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg class="divider-art"><use href="#d-divider"/></svg></div>
+
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div class="about-visual" data-reveal>
+        <picture>
+          <source srcset="../assets/img/about-appraisal.webp" type="image/webp">
+          <img src="../assets/img/about-appraisal.jpg" alt="ルーペで品物を確かめて査定するイメージ" width="1000" height="666" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="about-text">
+        <div class="section-head section-head--start">
+          <h2 class="section-title" id="about-title">カウカウについて</h2>
+          <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+        </div>
+        <p>買取専門店のカウカウです。査定費・出張費は無料。金・プラチナ・貴金属・ダイヤモンド・ブランド品・時計・バッグ・切手・古銭・着物・お酒など、他社圧倒の高額買取！</p>
+        <p>最新の価格相場で、日本一の買取に挑戦しています。他社とも比較してください。</p>
+        <p class="about-emphasis">お宅までお伺いいたしますので、何でもご相談ください。</p>
+        <div class="about-extra">
+          <span class="about-extra-icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
+          <div>
+            <h3 class="about-extra-title">不用品買取・空家整理も</h3>
+            <p>不用品の回収も致します。不用品の買取や、空家の整理もご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section items" id="items" aria-labelledby="items-title">
+    <div class="container">
+      <div class="panel panel--cream">
+        <div class="section-head">
+          <h2 class="section-title" id="items-title">買取品目</h2>
+          <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+        </div>
+        <p class="section-lead">このようなお品物を買い取っています（一例）。</p>
+        <ul class="item-grid" role="list">
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-brand-bag.webp" type="image/webp">
+              <img src="../assets/img/item-brand-bag.jpg" alt="ハンドバッグやショルダーバッグ、リュック" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">ブランド<wbr>バッグ</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-precious-metal.webp" type="image/webp">
+              <img src="../assets/img/item-precious-metal.jpg" alt="指輪やネックレス、金の延べ板などの貴金属" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">貴金属</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-instrument.webp" type="image/webp">
+              <img src="../assets/img/item-instrument.jpg" alt="キーボードとサックス" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">楽器</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-watch.webp" type="image/webp">
+              <img src="../assets/img/item-watch.jpg" alt="金色と銀色の腕時計" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">腕時計</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-camera.webp" type="image/webp">
+              <img src="../assets/img/item-camera.jpg" alt="一眼レフカメラと交換レンズ" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">カメラ</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-liquor.webp" type="image/webp">
+              <img src="../assets/img/item-liquor.jpg" alt="ウイスキーやブランデーの瓶" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">お酒</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-antique.webp" type="image/webp">
+              <img src="../assets/img/item-antique.jpg" alt="鉄瓶や茶道具、置物などの骨董品" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">骨董品</h3>
+          </li>
+          <li class="item-card" data-reveal>
+            <picture>
+              <source srcset="../assets/img/item-old-coin.webp" type="image/webp">
+              <img src="../assets/img/item-old-coin.jpg" alt="小判と穴のあいた古い硬貨" width="627" height="545" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="item-name">古銭</h3>
+          </li>
+        </ul>
+        <div class="items-more">
+          <p class="items-more-title">上記以外も買取致しますので、お気軽にお問い合わせください。</p>
+          <p>このほか、ダイヤモンド・切手・着物なども買い取っています。</p>
+          <a class="button button--ghost" href="tel:0643095212"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>電話で聞いてみる <span class="nowrap">06-4309-5212</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section flow" id="flow" aria-labelledby="flow-title">
+    <div class="container container--mid">
+      <div class="section-head">
+        <h2 class="section-title" id="flow-title">買取の流れ</h2>
+        <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+      </div>
+      <p class="section-lead">お問い合わせから、お支払いまでの3ステップです。</p>
+      <ol class="timeline" role="list">
+        <li class="step" data-reveal>
+          <span class="step-marker" aria-hidden="true">1</span>
+          <div class="step-card">
+            <div class="step-body">
+              <h3 class="step-title"><span class="visually-hidden">ステップ1：</span>お問い合わせ</h3>
+              <p>まずはお電話にて、お気軽にお問い合わせください。お売りいただける品のジャンルと、おおよその量をお伺いします。</p>
+              <a class="tel-link tel-link--mid" href="tel:0643095212"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="tel-number">06-4309-5212</span></a>
+            </div>
+            <picture class="step-photo">
+              <source srcset="../assets/img/flow-1-call.webp" type="image/webp">
+              <img src="../assets/img/flow-1-call.jpg" alt="スマートフォンを手に持っている様子" width="1200" height="800" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-marker" aria-hidden="true">2</span>
+          <div class="step-card">
+            <div class="step-body">
+              <h3 class="step-title"><span class="visually-hidden">ステップ2：</span>訪問日時の決定・査定</h3>
+              <p>お伺いする日と、お売りいただける品物を確認します。当日は、当店スタッフがお客様の元へお伺いし、その場で査定いたします。</p>
+              <p class="step-point"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>お品物を紐でしばったり、箱づめしたりする必要はありません。</p>
+              <p class="step-note">スタッフは事前に検温し、マスク着用・消毒などのウイルス対策をしてからお伺いします。</p>
+            </div>
+            <picture class="step-photo">
+              <source srcset="../assets/img/flow-2-schedule.webp" type="image/webp">
+              <img src="../assets/img/flow-2-schedule.jpg" alt="何枚も重なった月ごとのカレンダー" width="1000" height="667" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-marker" aria-hidden="true">3</span>
+          <div class="step-card">
+            <div class="step-body">
+              <h3 class="step-title"><span class="visually-hidden">ステップ3：</span>ご精算</h3>
+              <p>ご提示した金額にご了承いただければ、その場で現金でお支払いします。</p>
+              <p class="step-note">高額の場合や、肉筆類の真贋鑑定などは、当店で一旦お預かりし、ご指定の口座にお振込みします。</p>
+            </div>
+            <picture class="step-photo">
+              <source srcset="../assets/img/flow-3-cash.webp" type="image/webp">
+              <img src="../assets/img/flow-3-cash.jpg" alt="千円札と硬貨、電卓" width="1000" height="666" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg class="divider-art"><use href="#d-divider"/></svg></div>
+
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <h2 class="section-title" id="faq-title">よくあるご質問<span class="tbc">[要確認]</span></h2>
+        <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text">出張費や査定費はかかりますか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>かかりません。出張費・査定費は全て無料です。</p></div>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text">品物は、箱に詰めたり紐でしばったりしておくのですか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>いいえ。お品物を紐でしばったり、箱づめしたりする必要はありません。</p></div>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text">箱がない物や、キズのある物でも買い取ってもらえますか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>ブランド品やアクセサリーは、箱なし・キズありでも OK です。</p></div>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text">お金は、いつ、どのように受け取れますか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>ご提示した金額にご了承いただければ、その場で現金でお支払いします。高額の場合や、肉筆類の真贋鑑定などは、当店で一旦お預かりし、ご指定の口座にお振込みします。</p></div>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text">日曜日や祝日でも、電話で相談できますか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>できます。定休日は日曜・祝日ですが、お電話は年中無休で受け付けています。</p></div>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text">不用品の回収や、空家の整理もお願いできますか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>はい。不用品の回収も致します。不用品の買取や、空家の整理もご相談ください。</p></div>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary class="faq-q"><span class="faq-badge" aria-hidden="true">Q</span><span class="faq-q-text"><span class="tbc">[要確認]</span>出張に来てもらえる地域は、どこまでですか？</span><svg class="icon faq-icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="faq-a"><span class="faq-badge faq-badge--a" aria-hidden="true">A</span><p>まずはお電話にて、お気軽にお問い合わせください（06-4309-5212）。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section booking" id="booking" aria-labelledby="booking-title">
+    <div class="container">
+      <div class="panel panel--terracotta booking-panel">
+        <div class="booking-intro">
+          <div class="section-head section-head--start">
+            <h2 class="section-title" id="booking-title">出張査定の予約</h2>
+            <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+          </div>
+          <p>ご希望の日にちと、お売りになりたい品目をお知らせください。</p>
+          <p class="booking-tel-lead">お電話でもご予約いただけます。</p>
+          <a class="tel-link tel-link--mid" href="tel:0643095212"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="tel-number">06-4309-5212</span></a>
+          <p class="booking-hours"><span class="nowrap">営業時間 9:00〜18:00</span><span class="nowrap">（日・祝 定休）</span><br>お電話は年中無休で<span class="nowrap">受け付けています</span></p>
+        </div>
+        <div class="booking-card">
+          <form class="booking-form" data-booking data-endpoint="" data-min-seconds="4" method="post" novalidate>
+            <div class="field">
+              <label class="field-label" for="bk-name">お名前<span class="req">必須</span></label>
+              <input class="input" id="bk-name" name="name" type="text" autocomplete="name" required aria-describedby="bk-name-err">
+              <p class="field-error" id="bk-name-err" data-error-for="name"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="bk-tel">電話番号<span class="req">必須</span></label>
+              <p class="field-hint" id="bk-tel-hint">数字とハイフン（-）で入力してください。</p>
+              <input class="input" id="bk-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="bk-tel-hint bk-tel-err">
+              <p class="field-error" id="bk-tel-err" data-error-for="tel"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="bk-email">メールアドレス<span class="opt">任意</span></label>
+              <input class="input" id="bk-email" name="email" type="email" autocomplete="email" aria-describedby="bk-email-err">
+              <p class="field-error" id="bk-email-err" data-error-for="email"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="bk-address">ご住所（市区町村まで）<span class="req">必須</span></label>
+              <p class="field-hint" id="bk-address-hint">例：東大阪市</p>
+              <input class="input" id="bk-address" name="address" type="text" autocomplete="address-level2" required aria-describedby="bk-address-hint bk-address-err">
+              <p class="field-error" id="bk-address-err" data-error-for="address"></p>
+            </div>
+            <fieldset class="field field-pair">
+              <legend class="field-label">第1希望</legend>
+              <p class="field-hint" id="bk-date-hint">翌日以降の日にちをお選びください。</p>
+              <div class="pair-grid">
+                <div>
+                  <label class="sub-label" for="bk-date1">日にち<span class="req">必須</span></label>
+                  <input class="input" id="bk-date1" name="date1" type="date" required aria-describedby="bk-date-hint bk-date1-err">
+                  <p class="field-error" id="bk-date1-err" data-error-for="date1"></p>
+                </div>
+                <div>
+                  <label class="sub-label" for="bk-time1">時間帯<span class="opt">任意</span></label>
+                  <select class="input" id="bk-time1" name="time1" aria-describedby="bk-time1-err">
+                    <option>指定なし</option>
+                    <option>午前（9〜12時）</option>
+                    <option>午後（13〜18時）</option>
+                  </select>
+                  <p class="field-error" id="bk-time1-err" data-error-for="time1"></p>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="field field-pair">
+              <legend class="field-label">第2希望<span class="opt">任意</span></legend>
+              <div class="pair-grid">
+                <div>
+                  <label class="sub-label" for="bk-date2">日にち</label>
+                  <input class="input" id="bk-date2" name="date2" type="date" aria-describedby="bk-date-hint bk-date2-err">
+                  <p class="field-error" id="bk-date2-err" data-error-for="date2"></p>
+                </div>
+                <div>
+                  <label class="sub-label" for="bk-time2">時間帯</label>
+                  <select class="input" id="bk-time2" name="time2" aria-describedby="bk-time2-err">
+                    <option>指定なし</option>
+                    <option>午前（9〜12時）</option>
+                    <option>午後（13〜18時）</option>
+                  </select>
+                  <p class="field-error" id="bk-time2-err" data-error-for="time2"></p>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="field" aria-describedby="bk-items-hint bk-items-err">
+              <legend class="field-label">お売りになりたい品目<span class="req">必須</span></legend>
+              <p class="field-hint" id="bk-items-hint">いくつでも選べます。1つ以上お選びください。</p>
+              <div class="check-grid">
+                <label class="check-tile"><input type="checkbox" name="items" value="ブランドバッグ" aria-describedby="bk-items-err"><span>ブランド<wbr>バッグ</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="貴金属" aria-describedby="bk-items-err"><span>貴金属</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="腕時計" aria-describedby="bk-items-err"><span>腕時計</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="楽器" aria-describedby="bk-items-err"><span>楽器</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="カメラ" aria-describedby="bk-items-err"><span>カメラ</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="お酒" aria-describedby="bk-items-err"><span>お酒</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="骨董品" aria-describedby="bk-items-err"><span>骨董品</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="古銭" aria-describedby="bk-items-err"><span>古銭</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="着物" aria-describedby="bk-items-err"><span>着物</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="切手" aria-describedby="bk-items-err"><span>切手</span></label>
+                <label class="check-tile"><input type="checkbox" name="items" value="その他" aria-describedby="bk-items-err"><span>その他</span></label>
+              </div>
+              <p class="field-error" id="bk-items-err" data-error-for="items"></p>
+            </fieldset>
+            <div class="field">
+              <label class="field-label" for="bk-volume">おおよその量<span class="opt">任意</span></label>
+              <select class="input" id="bk-volume" name="volume" aria-describedby="bk-volume-err">
+                <option value="">選んでください</option>
+                <option>数点</option>
+                <option>段ボール数箱</option>
+                <option>大量（家一軒・空家整理）</option>
+                <option>わからない</option>
+              </select>
+              <p class="field-error" id="bk-volume-err" data-error-for="volume"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="bk-message">ご要望・備考<span class="opt">任意</span></label>
+              <textarea class="input textarea" id="bk-message" name="message" rows="4" aria-describedby="bk-message-err"></textarea>
+              <p class="field-error" id="bk-message-err" data-error-for="message"></p>
+            </div>
+            <div class="field">
+              <p class="privacy-note" id="bk-privacy"><strong>個人情報の取り扱い</strong><br>お預かりした個人情報は、出張査定のご予約とご連絡のためだけに使い、法令にもとづく場合を除いて、ご本人の同意なく第三者に提供しません。<span class="tbc">[要確認]</span></p>
+              <label class="check-agree"><input type="checkbox" name="agree" value="同意する" required aria-describedby="bk-privacy bk-agree-err"><span>個人情報の取り扱いに同意する</span><span class="req">必須</span></label>
+              <p class="field-error" id="bk-agree-err" data-error-for="agree"></p>
+            </div>
+            <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="started_at" value="">
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            <button class="button button--primary button--submit" type="submit">予約を申し込む</button>
+          </form>
+          <div class="booking-done" data-booking-done hidden tabindex="-1">
+            <span class="booking-done-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3 class="booking-done-title">お申し込みを受け付けました</h3>
+            <p>ありがとうございます。内容を確かめて、カウカウからご連絡いたします。<span class="tbc">[要確認]</span></p>
+            <p>お急ぎの方は、お電話でどうぞ。</p>
+            <a class="tel-link tel-link--mid" href="tel:0643095212"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="tel-number">06-4309-5212</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section company" id="company" aria-labelledby="company-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title" id="company-title">会社情報</h2>
+        <svg class="section-doodle" aria-hidden="true"><use href="#d-squiggle"/></svg>
+      </div>
+      <div class="company-card">
+        <dl class="company-list">
+          <div><dt>店名</dt><dd>カウカウ（買取専門店）</dd></div>
+          <div><dt>所在地</dt><dd>大阪府東大阪市若江東町5-6-21</dd></div>
+          <div><dt>電話</dt><dd><a class="company-tel" href="tel:0643095212">06-4309-5212</a></dd></div>
+          <div><dt>営業時間</dt><dd>9:00〜18:00</dd></div>
+          <div><dt>定休日</dt><dd>日曜・祝日<br>（電話・メール対応は年中無休）</dd></div>
+          <div><dt>古物商許可番号</dt><dd>第62221R065329号</dd></div>
+        </dl>
+        <div class="company-map">
+          <svg class="company-illust" viewBox="0 0 240 150" aria-hidden="true">
+            <path class="ill-ground" d="M8 128c40-6 80 4 120-2s70-6 104 0"/>
+            <path class="ill-house" d="M34 127V88M94 127V88M26 94 64 62l38 32M56 127v-20h16v20M78 98h10v10H78z"/>
+            <path class="ill-route" d="M100 120c24-2 40-9 58-24"/>
+            <path class="ill-pin" d="M172 98s-17-15-17-30a17 17 0 0 1 34 0c0 15-17 30-17 30zM172 74a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/>
+            <path class="ill-tree" d="M212 127v-21M212 107c-11 0-16-9-11-17-2-9 9-15 15-9 8-3 15 5 11 12 6 8-2 14-15 14z"/>
+            <path class="ill-sun" d="M40 30a8 8 0 1 0 16 0 8 8 0 1 0-16 0M48 12v5M48 43v5M30 30h5M61 30h5"/>
+          </svg>
+          <a class="button button--olive" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E8%8B%A5%E6%B1%9F%E6%9D%B1%E7%94%BA5-6-21" target="_blank" rel="noopener noreferrer" aria-describedby="map-note"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Google マップで開く</a>
+          <p class="company-map-note" id="map-note">新しいタブで開きます</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <svg class="footer-wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48V26c90-14 180-14 270-2s180 16 270 2 180-18 270-4 180 18 270 4 180-16 270-4 60 4 90 4V48z"/></svg>
+  <div class="container footer-grid">
+    <div class="footer-info">
+      <p class="footer-brand">カウカウ<span>買取専門店</span></p>
+      <p>大阪府東大阪市若江東町5-6-21</p>
+      <p>電話 <a href="tel:0643095212">06-4309-5212</a></p>
+      <p>古物商許可番号 第62221R065329号</p>
+    </div>
+    <div class="footer-privacy" id="privacy">
+      <h2 class="footer-title">個人情報の取り扱い</h2>
+      <p>お預かりした個人情報は、出張査定のご予約とご連絡のためだけに使い、法令にもとづく場合を除いて、ご本人の同意なく第三者に提供しません。<span class="tbc">[要確認]</span></p>
+    </div>
+  </div>
+  <p class="copyright"><small>© 2026 カウカウ</small><span class="tbc">[要確認]</span></p>
+  <!-- 試作の表示。本番で消す -->
+  <p class="prototype-note">※ このページはデザイン案の試作版です。予約フォームからの送信は行われません。</p>
+  <a class="to-top" href="#top" data-to-top><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg><span>上へ</span><span class="visually-hidden">（ページの先頭に戻る）</span></a>
+</footer>
+
+<aside class="cta-bar" aria-label="お電話・ご予約">
+  <a class="cta-bar-call" href="tel:0643095212"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="cta-bar-text"><span class="cta-bar-small">電話する</span><span class="cta-bar-num">06-4309-5212</span></span></a>
+  <a class="cta-bar-book" href="#booking"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg><span>予約する</span></a>
+</aside>
+
+<script src="../assets/js/booking-form.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
